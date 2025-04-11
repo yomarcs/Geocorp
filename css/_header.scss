@@ -1,0 +1,185 @@
+.header-top{
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--color_moonMist);
+  height: 40px;
+  padding: 0 80px;
+  @include Mobile{
+    padding: 0 10px;
+  }
+  .header-contact{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    @include Mobile{
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    a{
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      span{
+        margin-left: 8px;
+      }
+    }
+    a:hover{
+      color: var(--color_darkBlue) !important;
+    }
+  }
+  .header-social{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    @include Mobile{
+      display: none;
+    }
+    .fa-facebook:hover{
+      color: var(--color_facebook);
+    }
+    .fa-linkedin-in:hover{
+      color: var(--color_linkedin);
+    }
+    .fa-twitter:hover{
+      color: var(--color_twitter);
+    }
+    .fa-instagram:hover {
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      background-clip: text; // Hace que el fondo (el degradado) se aplique solo al texto, en lugar de al fondo del elemento
+      -webkit-background-clip: text; // Es el prefijo para que funcione en navegadores basados en WebKit (como Chrome y Safari).
+      -webkit-text-fill-color: transparent; // Hace que el color del texto sea transparente, permitiendo que se vea el degradado.
+    }
+  }
+}
+
+.header-main {
+	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color_white);
+	height: 85px;
+  padding: 15px clamp(22px, 2vw, 150px);
+  .brand .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    color: var(--color_darkBlue);
+    text-decoration: none;
+    h1{
+      font-family: var(--font_montserrat);
+      font-optical-sizing: auto;
+      font-size: 2.8rem;
+      font-weight: 600;
+      font-style: normal;
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    .nav-links{
+      display: flex;
+      align-items: center;
+      li{
+        list-style-type: none;
+        width: 100%;
+        margin: 0 5px;  
+        .animated-link{
+          display: block;
+          width: 100%;
+          position: relative;     
+          text-decoration: none; 
+          color: var(--color_darkBlue);    
+          padding: 5px 15px; 
+          cursor: pointer;  
+          transition: color 0.3s ease-in-out; 
+          @include Mobile{
+            color: var(--color_white);
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0px;
+            height: 1px;
+            background-color: var(--color_skyBlue); 
+            transition: width 0.4s ease, left 0.4s ease;
+          }
+          &:hover::after{
+            width: 100%; 
+            left: 0;
+          }
+          // &.active::after{
+          //   width: 100%; 
+          //   left: 0;
+          //   background-color: var(--color_skyBlue); 
+          // }
+        }
+        .active {
+          color: #00aaff; /* Color en el link activo */
+          font-weight: bolder; /* Aumenta el peso de la fuente para el link activo */
+          font-size: 1.03rem;
+        }
+      }
+      @include Mobile{
+        display: none;
+        flex-direction: column;
+        background: hsl(227, 22%, 16%, 0.9);
+        color: hsl(197, 88%, 47%);
+        position: absolute;
+        top: 125px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        z-index: 10000;
+        &.active{
+          display: flex;
+        }
+        li:hover{
+          background: rgba(16, 59, 100, 0.7);
+        }
+        li .animated-link{
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 20px 0px;
+          &:hover::after{
+            width: 0; 
+          }
+          &.active::after {
+            width: 0 !important;
+          }          
+        }
+      }
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      span{
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--color_darkBlue);
+        margin: 3px 0;
+        transition: all 0.3s ease;
+        transform-origin: left;
+      }
+      &:hover span:nth-child(2) {
+        width: 20px;
+      }
+      &:hover span:nth-child(3) {
+        width: 15px;
+      }
+      @include Mobile{
+        display: flex;
+      }
+    }
+  }
+}

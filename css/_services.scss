@@ -1,0 +1,347 @@
+/* Sección de servicios */
+//? Index - Servicios
+.services {
+  padding: 60px 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  h2 {
+    font-size: calc(1.8rem + 1vw);
+    line-height: clamp(1.2rem, 1.5vw, 1.6rem); 
+    font-family: var(--font_nunito);
+    font-weight: 700;
+    color: var(--color_darkBlue);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    width: 100%; /* Para que no se vea más angosto */
+    text-align: center;
+  }
+  .services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Espaciado entre los items */
+    width: 100%;
+    .service-item {
+      width: 95%;
+      max-width: 320px;
+      background-color: var(--color_white);
+      // border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+      // overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative; // necesario para posicionar la imagen flotante respecto al card
+      border-bottom: 3px solid var(--color_darkBlue);
+      // border-top: 3px solid var(--color_darkBlue);
+      @include Mobile{
+        max-width: 350px;
+      }
+      &:hover{
+        transform: translateY(-8px);
+        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.4);
+        opacity: 1;
+        .image-container::after{
+          opacity: 1;
+        }
+      }
+      .floating-image-wrapper {
+        position: absolute;
+        left: -30px; // sobresale a la izquierda
+        top: 50%;
+        transform: translateY(-75%);
+        z-index: 2;
+        width: 100px;
+        height: auto;
+        pointer-events: none; // evita interferencia con clics
+        .floating-image {
+          width: 100%;
+          height: auto;
+          opacity: 0.95;
+          filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+          transition: transform 0.4s ease;
+        }
+      }
+      .image-container{
+        position: relative; /* Para que el pseudo-elemento se posicione sobre la imagen */
+        width: 100%;
+        height: 200px;
+        overflow: visible;
+        &::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(16, 59, 100, 0.2);
+          // border-top-left-radius: 12px; 
+          // border-top-right-radius: 12px;
+          opacity: 0;
+          pointer-events: none; /* IMPORTANTE: Evita que bloquee la interacción */
+          transition: opacity 0.5s ease-in-out;
+        }
+        img{
+          width: 100%;
+          height: 200px; // Fijamos una altura para todas las imágenes
+          object-fit: cover; // Ajustamos la imagen sin deformarla
+          // border-top-left-radius: 12px;
+          // border-top-right-radius: 12px;
+          filter: saturate(1.5) contrast(1.2) brightness(1);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .description{
+        padding: 40px 25px 25px;
+        flex-grow: 1; // Asegura que el contenido crezca uniformemente
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h3 {
+          font-family: var(--font_nunito);
+          font-size: 1.2rem;
+          color: var(--color_darkBlue);
+          font-weight: bold;
+          margin: 0 0 15px 0;
+          letter-spacing: 0.5px;
+        }
+        p {
+          font-size: 0.95rem;
+          line-height: 1.4;
+          color: #444;
+          margin-bottom: 20px;
+        }
+        .more-btn {
+          margin-top: auto; // 👈 Esto lo empuja hacia abajo
+          align-self: center; // opcional para centrar horizontalmente
+          padding: 10px 25px;
+          background: transparent;
+          color: var(--color_darkBlue);
+          font-family: var(--font_nunito);
+          font-size: 0.9rem;
+          font-weight: 600;
+          text-decoration: none;
+          border: 1px solid var(--color_darkBlue);
+          border-radius: 5px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          &:hover {
+            color: var(--color_white);
+            border: none;
+            transform: translateY(-2px);
+            background: var(--color_darkBlue);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+          }
+          &::after {
+            content: "→";
+            margin-left: 8px;
+            transition: margin-left 0.3s ease;
+          }       
+          &:hover::after {
+            margin-left: 12px;
+          }
+        }
+        
+      }   
+    }
+  }
+}
+
+//? Servicios
+.pvc-installation {
+  padding: 60px 5%;
+  background-color: var(--color_lightGray);
+  text-align: center;
+}
+
+.pvc-installation h2 {
+  color: var(--color_darkBlue);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: var(--font_nunito);
+}
+
+.pvc-installation .intro {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #333;
+}
+
+.application-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.app-item {
+  background: var(--color_white);
+  border-left: 5px solid var(--color_darkBlue);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+  img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+}
+
+.app-item h3 {
+  color: var(--color_darkBlue);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.app-item p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cta-box {
+  margin-top: 40px;
+}
+
+.cta-box p {
+  font-size: 1.1rem;
+  color: var(--color_darkBlue);
+  margin-bottom: 20px;
+}
+
+.more-btn {
+  background: linear-gradient(135deg, var(--color_darkBlue), #00aaff);
+  color: #fff;
+  padding: 12px 30px;
+  font-weight: bold;
+  font-family: var(--font_nunito);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+  background: linear-gradient(135deg, #00aaff, var(--color_darkBlue));
+  transform: scale(1.05);
+}
+
+
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+.popup-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+}
+.popup-content p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+.popup-content button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  background-color: #003c71;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background-color: #007acc;
+}
+
+
+// -----------------------------------------------------------
+
+.services {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #003366;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.service:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.service-content {
+  width: 50%;
+  padding: 20px;
+}
+
+.service-content h3 {
+  font-size: 2rem;
+  color: #00509e;
+  margin-bottom: 20px;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.service-content ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.service-image {
+  width: 45%;
+}
+
+.service-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

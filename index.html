@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GeoCorp - </title>
+  <!-- Icono -->
+  <link rel="icon" type="image/x-icon" href="./assets/img/logo_geocorp_ico-transparent.ico">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <img src="./assets/img/logo_geocorp-transparent.png" alt="Logo" class="preloader-logo">
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+
+<header>
+  <div class="header-top">
+    <div class="header-contact">
+      <a href="tel:924067638" target="_blank" style="font-size: 14px; margin-right: 15px; color: #4164AB;" rel="noopener"><i class="fa fa-phone" style="transform: scaleX(-1);"></i><span>924067638</span></a>
+      <a href="mailto:info@geocorp.com" target="_blank" style="font-size: 14px; color: #4164AB;" rel="noopener"><i class="fa fa-envelope"></i><span>info@geocorp.com</span></a>
+    </div>
+    <div class="header-social">
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="brand">
+      <a href="./index.html" class="logo">
+        <img src="./assets/img/logo_geocorp-sombra.png" alt="GeoCorp" width="60px">
+        <h1><span class="highlight">Geo</span>Corp</h1>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="animated-link active">Inicio</a></li>
+        <li><a href="Nosotros.html" class="animated-link">Nosotros</a></li>
+        <li><a href="servicios.html" class="animated-link">Servicios</a></li>
+        <li><a href="proyectos.html" class="animated-link">Proyectos</a></li>
+        <li><a href="contacto.html" class="animated-link">Contacto</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="banner">
+    <div class="overlay">
+      <h2 class="title"></h2>
+      <p class="description"></p>
+      <a href="#contact" class="cta-button">Solicita tu presupuesto</a>
+    </div> 
+  </section>
+
+  <div class="main-content">
+    <section class="services" id="services">
+      <h2>Nuestros Servicios</h2>
+      <div class="services-container"></div>  
+    </section>
+  
+    <section class="projects">
+      <h2>Nuestros Proyectos</h2>
+      <div class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-track" id="carousel-track">
+          <!-- Los elementos se complementarán desde JS -->
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+  
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <!-- Información de la empresa -->
+        <div class="contact-info">
+          <h2>Contacto</h2>
+          <p><strong>📍  Dirección:</strong> Av. Principal 123, Ciudad, País</p>
+          <p><strong>📞 Teléfono:</strong> +51 924067638 </p>
+          <p><strong>✉️ Correo:</strong> info@geocorp.com</p>
+          <p><strong>🕒 Horario:</strong> Lunes a Viernes, 9 AM - 6 PM</p>
+        </div>
+    
+        <!-- Formulario de contacto -->
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Tu nombre" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Correo</label>
+              <input type="email" id="email" placeholder="Tu correo" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+            </div>
+    
+            <button type="submit" class="btn-send">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+</main>
+
+<a href="https://wa.me/+51924067638?text=¡Hola!%20Quisiera%20más%20información." 
+   class="whatsapp-button" 
+   target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" 
+       alt="WhatsApp" />
+</a>
+
+<footer>
+  <section class="container-footer">
+    <div class="about-container mt-2">
+      <div class="about">
+        <h4 class="primary">ACERCA DE</h4>
+        <ul>
+          <li><a href="#"><i class="fa fa-users mt-2 mr-3" style="color:chocolate;" aria-hidden="true"></i>Nosotros</a></li>
+          <li><a href="#"><i class="fa fa-balance-scale mt-2 mr-3" style="color: #BE71EB;" aria-hidden="true"></i>Responsabilidad Social</a></li>
+          <li><a href="#"><i class="fas fa-handshake mt-2 mr-3" style="color: #EBC813;"></i>Trabaja con Nosotros</a></li>
+          <li><a href="#"><i class="fas fa-head-side-mask mt-2 mr-3" style="color: dodgerblue"></i>Prevención COVID-19</a></li>
+          <li><a href="#"><i class="fas fa-globe-americas mt-2 mr-3 primary"></i>Pasión por el planeta</a></li>
+        </ul>
+      </div>
+      <div class="about">
+        <h4 class="primary">COMPRA EN</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-store mt-2 mr-3" style="color:tomato;"></i>¿Cómo Comprar?</a></li>
+          <li><a href="#"><i class="fas fa-money-bill-wave mt-2 mr-3 primary"></i>Formas de Pago</a></li>
+          <li><a href="#"><i class="fa fa-question mt-2 mr-3" style="color: red;" aria-hidden="true"></i>Preguntas Frecuentes</a></li>
+          <li><a href="#"><i class="fa fa-comments mt-2 mr-3" style="color:mediumturquoise;" aria-hidden="true"></i>Servicio al Cliente</a></li>
+        </ul>
+      </div>
+      <div class="about">
+        <h4 class="primary">POLÍTICAS</h4>
+        <ul>
+          <li><a href="#"><i class="fas fa-hands-helping mt-2 mr-3" style="color: #f78606;" aria-hidden="true"></i>Terminos y Condiciones</a></li>
+          <li><a href="#"><i class="fa fa-lock mt-2 mr-3" style="color: gold;" aria-hidden="true"></i>Uso de Datos Personales</a></li>
+            <li><a href="#"><i class="fas fa-check-double mt-2 mr-3" style="color: #0279F2;"></i>Condiciones de Ofertas</a></li>
+            <li><a href="#"><i class="fa fa-book-open mt-2 mr-3" style="color: white;" aria-hidden="true"></i>Libro de Reclamaciones</a></li>                        
+        </ul> 
+      </div>
+      <div class="about">
+        <h4 class="primary">Call Center</h4>
+        <ul><li><i class="fas fa-headset mr-3" style="color: #C20D35;"></i> 555 - 5555</li><li style="margin-left: 35px;">L - V 08:00 - 18:00 hrs</li></ul>
+        <h4 class="primary">Whatsapp</h4>
+        <ul><li><a href="http://wa.me/987654321"><i class="fab fa-whatsapp mr-3 primary" aria-hidden="true"></i> +511987654321 - 24hrs</a></li></ul>
+      </div>  
+    </div> 
+    <div class="container-payment">
+      <span class="mr-4"><img class="payment" src="https://cdn-icons-png.flaticon.com/512/349/349221.png"></span>
+      <span class="mr-4"><img class="payment" src="https://cdn-icons-png.flaticon.com/512/349/349228.png"></span>
+      <span class="mr-4"><img class="payment" src="https://cdn-icons-png.flaticon.com/512/349/349225.png"></span>
+      <span class="mr-4"><img class="payment" src="https://cdn-icons-png.flaticon.com/512/5363/5363178.png"></span>
+    </div>
+    <div class="container-social">
+      <div>
+        <p>Siguenos:</p>
+        <a href="#"><i style="color:#1877F2; margin-right: 10px;" class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i style="color:#1D9BF0; margin-right: 10px;" class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i style="color:#E73950; margin-right: 10px;" class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i style="color:#FFFFFF; margin-right: 10px;" class="fab fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+      <div>
+        <p class="mr-4">Impulsate:</p>
+        <a href="https://apply.holbertonschool.com" target="blank"><img class="mr-4"  style="width:100px;" src="https://holberton-peru.com/storage/media/3rXHgQvQ8LqvY4ClnG2ncJgBrnufN3NRDDRvuCFB.png" alt="Holberton"></a>
+      </div>
+    </div> 
+    <hr>
+    <div>
+      <p class="copyright">&copy; <span id="copyright-year"></span><span class="highlight"> — Geo</span>Corp. All rights reserved. | Developed by <strong>YomarCs</strong></p>
+    </div>
+  </section>
+</footer>
+
+  <script type="module" src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</body>
+</html>

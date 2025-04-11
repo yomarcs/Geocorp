@@ -1,0 +1,40 @@
+//? path image
+$path_image-banner: '../assets/img/banner.png';
+
+//? font family 
+$font_roboto: 'Roboto', sans-serif;
+$font_montserrat: 'Montserrat', sans-serif;
+$font_nunito: "Nunito", sans-serif;
+$font_rubik: "Rubik", sans-serif;
+
+//? colors
+// $color_darkBlue: hsl(227, 22%, 16%);
+// $color_darkBlue: hsl(247, 29%, 30%);
+$color_darkBlue: #103B64;
+// $color_darkBlue: #011935;
+$color_skyBlue: rgb(14, 166, 225);
+$color_skyBlue-transparent: rgba(14, 166, 225, 0.7);
+$color_moonMist: hsl(249, 23%, 89%);
+$color_white: hsl(0, 0%, 100%);
+$color_facebook: hsl(217, 100%, 52%);
+$color_linkedin: hsl(210, 90%, 40%);
+$color_twitter: hsl(203, 93%, 54%);
+$color_instagram: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+
+
+:root{
+  --color_darkBlue: #{$color_darkBlue};
+  --color_skyBlue: #{$color_skyBlue};
+  --color_skyBlue-transparent: #{$color_skyBlue-transparent};
+  --color_white: #{$color_white};
+  --color_moonMist: #{$color_moonMist};
+  --color_facebook: #{$color_facebook};
+  --color_linkedin: #{$color_linkedin};
+  --color_twitter: #{$color_twitter};
+  --color_instagram: #{$color_instagram};
+
+  --font_roboto: #{$font_roboto};
+  --font_montserrat: #{$font_montserrat};
+  --font_nunito: #{$font_nunito};
+  --font_rubik: #{$font_rubik};
+}
