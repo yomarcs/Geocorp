@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>GeoCorp - </title>
   <!-- Icono -->
-  <link rel="icon" type="image/x-icon" href="./assets/img/logo_geocorp_ico-transparent.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/img/Logo-Geocorp_transparente.png">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <!-- Google Fonts -->
@@ -21,9 +20,11 @@
 <body>
 <div id="loader-wrapper">
   <div id="loader"></div>
-  <img src="./assets/img/logo_geocorp-transparent.png" alt="Logo" class="preloader-logo">
-  <div class="loader-section section-left"></div>
-  <div class="loader-section section-right"></div>
+  <div class="loader-sections">
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <img src="./assets/img/Logo-Geocorp.png" alt="Logo" class="preloader-logo">
 </div>
 
 <header>
@@ -43,7 +44,7 @@
   <div class="header-main">
     <div class="brand">
       <a href="./index.html" class="logo">
-        <img src="./assets/img/logo_geocorp-sombra.png" alt="GeoCorp" width="60px">
+        <img src="./assets/img/Logo-Geocorp.png" alt="GeoCorp" width="60px">
         <h1><span class="highlight">Geo</span>Corp</h1>
       </a>
     </div>
@@ -69,30 +70,44 @@
     <div class="overlay">
       <h2 class="title"></h2>
       <p class="description"></p>
-      <a href="#contact" class="cta-button">Solicita tu presupuesto</a>
     </div> 
+    <a href="#contact" class="cta-button">Solicita tu presupuesto</a>
   </section>
 
   <div class="main-content">
-    <section class="services" id="services">
+
+    <div class="services">
+      <div class="column column-1">
+        <div class="services-title">
+          <span class="services-subtitle">Conoce</span>
+          <h2>Nuestros Servicios</h2>
+        </div>
+      </div>
+      <div class="column column-2">
+      </div>
+      <div class="column column-3">
+      </div>
+    </div>
+    
+
+    <!-- <section class="services" id="services">
+      <span class="services-subtitle">Conoce</span>
       <h2>Nuestros Servicios</h2>
       <div class="services-container"></div>  
-    </section>
+    </section> -->
   
-    <section class="projects">
+    <!-- <section class="projects">
       <h2>Nuestros Proyectos</h2>
       <div class="carousel">
         <button class="prev">&#10094;</button>
         <div class="carousel-track" id="carousel-track">
-          <!-- Los elementos se complementarán desde JS -->
         </div>
         <button class="next">&#10095;</button>
       </div>
-    </section>
+    </section> -->
   
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
       <div class="contact-container">
-        <!-- Información de la empresa -->
         <div class="contact-info">
           <h2>Contacto</h2>
           <p><strong>📍  Dirección:</strong> Av. Principal 123, Ciudad, País</p>
@@ -101,7 +116,6 @@
           <p><strong>🕒 Horario:</strong> Lunes a Viernes, 9 AM - 6 PM</p>
         </div>
     
-        <!-- Formulario de contacto -->
         <div class="contact-form">
           <form>
             <div class="form-group">
@@ -123,7 +137,7 @@
           </form>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
   
 </main>

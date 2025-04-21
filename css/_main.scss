@@ -3,10 +3,15 @@
 @import './projects';
 @import './contact';
 
+main{
+  width: 100%;
+}
+
 .main-content{
+  width: 100%;
   background: url('../assets/img/bg_main.jpg') no-repeat left  top;
   background-size: cover;
-  @include Mobile{
-    background-image: url('../assets/img/bg_main2.jpg');
-  }
+  // @include Mobile{
+  //   background-image: url('../assets/img/bg_main2.jpg');
+  // }
 }

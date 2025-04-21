@@ -2,12 +2,12 @@
 .banner {
   position: relative;
   width: 100%;
-  height: calc(25vh + 25vw);
+  height: calc(50vh + 15vw);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
   transition: background-image 1s ease-in-out;
   filter: saturate(1.2)	contrast(1.2) brightness(1);
   z-index: 99;
@@ -21,6 +21,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(16, 59, 100, 0.7), transparent);
+    // background: linear-gradient(to right, rgba(77, 56, 18, 0.7), transparent);
     pointer-events: none; /* Permite que los clics pasen a la imagen */
     z-index: 1;
   }
@@ -31,14 +32,14 @@
     z-index: 1000;
     h2{
       font-family: var(--font_nunito);
-      font-size: clamp(1.5rem, 2.5vw, 3rem); /* Ajusta entre 1.2rem y 2.5rem */
-      line-height: clamp(1.6rem, 1.6vw, 2rem); /* Ajusta la separación */
+      font-size: clamp(2rem, 2.5vw, 3rem); /* Ajusta entre 1.2rem y 2.5rem */
+      line-height: clamp(2.5rem, 1.6vw, 2rem); /* Ajusta la separación */
       margin-bottom: 10px;
     }
     p{
-      font-size: clamp(0.8rem, 1.3vw, 1rem); /* Ajusta entre 0.8rem y 1.6rem */
-      line-height: clamp(1.3rem, 1.8vw, 2rem); /* Más compacto en grandes, más espacio en pequeñas */
-      margin-bottom: clamp(10px, 1vw, 20px);
+      font-size: clamp(1rem, 1.3vw, 1rem); /* Ajusta entre 0.8rem y 1.6rem */
+      line-height: clamp(1.5rem, 1.8vw, 2rem); /* Más compacto en grandes, más espacio en pequeñas */
+      margin-bottom: clamp(20px, 1vw, 20px);
     }
     .title,
     .description {
@@ -51,47 +52,38 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .cta-button {
-      display: inline-block;
-      background-color: transparent;
-      border: 1px solid var(--color_white);
-      padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px); /* Ajusta el tamaño del botón */
-      font-size: clamp(0.8rem, 0.9vw, 1rem); /* Ajusta entre 0.8rem y 1.2rem */
-      min-width: clamp(120px, 20vw, 180px); /* Evita que el botón se vea demasiado pequeño o grande */
-      color: var(--color_white);
-      font-weight: 300;
-      text-decoration: none;
-      border-radius: 5px;
-      text-align: center;
-      transition: all 0.3s ease-in-out;
-      z-index: 2000;
-      position: relative;
-      overflow: hidden;
-      &::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: var(--color_skyBlue);
-        opacity: 0.15;
-        transition: left 0.4s ease-in-out;
-        &:hover{
-          left: 0;
-        }
-      }
-      &:hover{
-        background-color: rgba(255, 255, 255, 0.1); /* Sutil cambio de fondo */
-        border-color: rgba(255, 255, 255, 0.5); /* Borde ligeramente más visible */
-        transform: scale(1.03); /* Pequeño aumento al pasar el mouse */
-      }
-    }
-    @include Mobile{
+    @include Tablet{
       justify-content: center;
       width: 95%;
     }
   }
+
+  .cta-button {
+    position: absolute;
+    left: 6%;
+    top: 75%;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--color_white);
+    padding: clamp(15px, 2vw, 20px) clamp(40px, 4vw, 25px); 
+    font-size: clamp(0.9rem, 0.9vw, 1rem); 
+    min-width: clamp(150px, 20vw, 200px); 
+    // color: var(--color_white);
+    color: var(--color_white);
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 2000;
+    overflow: hidden;
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.1); /* Sutil cambio de fondo */
+      border-color: rgba(255, 255, 255, 0.5); /* Borde ligeramente más visible */
+      transform: scale(1.03); /* Pequeño aumento al pasar el mouse */
+    }
+  }
+
   .indicators {
     position: absolute;
     bottom: 15px;

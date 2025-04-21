@@ -4,7 +4,7 @@
   border-bottom: 1px solid var(--color_moonMist);
   height: 40px;
   padding: 0 80px;
-  @include Mobile{
+  @include Tablet{
     padding: 0 10px;
   }
   .header-contact{
@@ -13,7 +13,7 @@
     align-items: center;
     gap: 10px;
     flex: 1;
-    @include Mobile{
+    @include Tablet{
       justify-content: space-between;
       padding: 0 10px;
     }
@@ -27,6 +27,12 @@
     }
     a:hover{
       color: var(--color_darkBlue) !important;
+      .fa-phone{
+        color: #C82F2F;
+      }
+      .fa-envelope{
+        color: #FCBA4C;
+      }
     }
   }
   .header-social{
@@ -35,7 +41,7 @@
     align-items: center;
     gap: 10px;
     flex: 1;
-    @include Mobile{
+    @include Tablet{
       display: none;
     }
     .fa-facebook:hover{
@@ -63,12 +69,12 @@
   align-items: center;
   background: var(--color_white);
 	height: 85px;
-  padding: 15px clamp(22px, 2vw, 150px);
+  padding: 15px clamp(35px, 2.5vw, 200px) 15px clamp(35px, 2.5vw, 200px);
   .brand .logo{
     display: flex;
     align-items: center;
     gap: 10px; 
-    color: var(--color_darkBlue);
+    color: var(--color_orange);
     text-decoration: none;
     h1{
       font-family: var(--font_montserrat);
@@ -97,7 +103,7 @@
           padding: 5px 15px; 
           cursor: pointer;  
           transition: color 0.3s ease-in-out; 
-          @include Mobile{
+          @include Tablet{
             color: var(--color_white);
           }
           &::after{
@@ -114,19 +120,19 @@
             width: 100%; 
             left: 0;
           }
-          // &.active::after{
-          //   width: 100%; 
-          //   left: 0;
-          //   background-color: var(--color_skyBlue); 
-          // }
         }
         .active {
-          color: #00aaff; /* Color en el link activo */
-          font-weight: bolder; /* Aumenta el peso de la fuente para el link activo */
+          color: var(--color_orange); 
           font-size: 1.03rem;
+          font-weight: 500;
+          &:hover::after{
+            background-color: var(--color_orange); 
+            width: 100%; 
+            left: 0;
+          }
         }
       }
-      @include Mobile{
+      @include Tablet{
         display: none;
         flex-direction: column;
         background: hsl(227, 22%, 16%, 0.9);
@@ -177,7 +183,7 @@
       &:hover span:nth-child(3) {
         width: 15px;
       }
-      @include Mobile{
+      @include Tablet{
         display: flex;
       }
     }

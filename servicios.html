@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GeoCorp - Servicios</title>
-  <link rel="icon" type="image/x-icon" href="./assets/img/logo_geocorp_ico-transparent.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/img/Logo-Geocorp_transparente.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,152 +15,161 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <div class="header-contact">
-        <a href="tel:924067638" target="_blank" style="font-size: 14px; margin-right: 15px; color: #4164AB;" rel="noopener"><i class="fa fa-phone" style="transform: scaleX(-1);"></i><span>924067638</span></a>
-        <a href="mailto:info@geocorp.com" target="_blank" style="font-size: 14px; color: #4164AB;" rel="noopener"><i class="fa fa-envelope"></i><span>info@geocorp.com</span></a>
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-sections">
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <img src="./assets/img/Logo-Geocorp.png" alt="Logo" class="preloader-logo">
+</div>
+
+<header>
+  <div class="header-top">
+    <div class="header-contact">
+      <a href="tel:924067638" target="_blank" style="font-size: 14px; margin-right: 15px; color: #4164AB;" rel="noopener"><i class="fa fa-phone" style="transform: scaleX(-1);"></i><span>924067638</span></a>
+      <a href="mailto:info@geocorp.com" target="_blank" style="font-size: 14px; color: #4164AB;" rel="noopener"><i class="fa fa-envelope"></i><span>info@geocorp.com</span></a>
+    </div>
+    <div class="header-social">
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-facebook"></i></a>
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="brand">
+      <a href="./index.html" class="logo">
+        <img src="./assets/img/Logo-Geocorp.png" alt="GeoCorp" width="60px">
+        <h1><span class="highlight">Geo</span>Corp</h1>
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="animated-link">Inicio</a></li>
+        <li><a href="Nosotros.html" class="animated-link">Nosotros</a></li>
+        <li><a href="servicios.html" class="animated-link active">Servicios</a></li>
+        <li><a href="proyectos.html" class="animated-link">Proyectos</a></li>
+        <li><a href="contacto.html" class="animated-link">Contacto</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="header-social">
-        <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank" style="font-size: 16px; margin-right: 8px; color: #4164AB;" rel="noopener"><i class="fab fa-instagram"></i></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- <section class="services pvc-installation">
+    <h2>Instalación de Geomembranas de PVC</h2>
+    <p class="intro">
+      En <strong>Geocorp</strong> brindamos soluciones confiables y duraderas en la instalación de <strong>geomembranas de PVC</strong>, ideales para proyectos de impermeabilización, protección ambiental y eficiencia hídrica en distintos sectores.
+    </p>
+  
+    <div class="application-list">
+      <div class="app-item">
+        <img src="./assets/img/estanque.png" alt="Estanques">
+        <h3>1. Estanques</h3>
+        <p>Además de almacenar agua, los estanques con geomembrana embellecen jardines y espacios recreativos. Son versátiles, estéticos y perfectos para áreas decorativas o de descanso.</p>
+      </div>
+      <div class="app-item">
+        <img src="./assets/img/techo.png" alt="Techos">
+        <h3>2. Techos - Terrazas - Azoteas</h3>
+        <p>Protege tu techo de filtraciones y humedad, extendiendo su vida útil. Con nuestras soluciones discretas y duraderas, garantizamos una máxima protección sin sacrificar la estética, ya sea en techos residenciales, comerciales o industriales.</p>
+      </div>
+      <div class="app-item">
+        <img src="./assets/img/jardinera.png" alt="Jardinera">
+        <h3>3. Jardineras</h3>
+        <p>Protege tus jardineras de filtraciones y humedad con nuestras soluciones de impermeabilización. Garantizamos que tus espacios verdes permanezcan secos, seguros y estéticamente agradables, prolongando la vida de tus plantas y estructuras sin sacrificar el diseño.</p>
+      </div>
+      <div class="app-item" onclick="openPopup('./assets/img/banner4.jpg', 'Impermeabilización de Lagunas')">
+        <img src="./assets/img/banner4.jpg" alt="Biodigestores">
+        <h3>4. Canales y Riego</h3>
+        <p>Revestimos canales para mejorar la eficiencia del transporte de agua y reducir pérdidas por infiltración.</p>
+      </div>
+      <div class="app-item" onclick="openPopup('./assets/img/asesoria.jpg', 'Impermeabilización de Lagunas')">
+        <img src="./assets/img/asesoria.jpg" alt="Biodigestores">
+        <h3>5. Acuicultura</h3>
+        <p>Construimos estanques para piscicultura que ofrecen control total del medio acuático y durabilidad.</p>
+      </div>
+      <div class="app-item" onclick="openPopup('./assets/img/mantenimiento.jpg', 'Impermeabilización de Lagunas')">
+        <img src="./assets/img/mantenimiento.jpg" alt="Biodigestores">
+        <h3>6. Techos Verdes</h3>
+        <p>Protegemos estructuras con sistemas de impermeabilización en jardines y azoteas ecológicas.</p>
+      </div>
+      <div class="app-item" onclick="openPopup('./assets/img/banner1.png', 'Impermeabilización de Lagunas')">
+        <img src="./assets/img/banner1.png" alt="Biodigestores">
+        <h3>7. Residuos Industriales</h3>
+        <p>Instalamos geomembranas para contención segura de residuos peligrosos en plantas industriales.</p>
+      </div>
+      <div class="app-item" onclick="openPopup('./assets/img/banner2.jpg', 'Impermeabilización de Lagunas')">
+        <img src="./assets/img/banner2.jpg" alt="Biodigestores">
+        <h3>8. Túneles y Subterráneos</h3>
+        <p>Impermeabilizamos túneles y estructuras subterráneas contra filtraciones y humedad.</p>
+      </div>
+      <div class="app-item" onclick="openPopup('./assets/img/banner3.jpg', 'Impermeabilización de Lagunas')">
+        <img src="./assets/img/banner3.jpg" alt="Biodigestores">
+        <h3>9. Piscinas y Parques Acuáticos</h3>
+        <p>Revestimos instalaciones recreativas garantizando estanqueidad, estética y fácil mantenimiento.</p>
       </div>
     </div>
   
-    <div class="header-main">
-      <div class="brand">
-        <a href="#" class="logo">
-          <img src="./assets/img/logo_geocorp-sombra.png" alt="GeoCorp" width="60px">
-          <h1><span class="highlight">Geo</span>Corp</h1>
-        </a>
-      </div>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="index.html" class="animated-link">Inicio</a></li>
-          <li><a href="Nosotros.html" class="animated-link">Nosotros</a></li>
-          <li><a href="servicios.html" class="animated-link active">Servicios</a></li>
-          <li><a href="proyectos.html" class="animated-link">Proyectos</a></li>
-          <li><a href="contacto.html" class="animated-link">Contacto</a></li>
+    <div class="cta-box">
+      <p>¿Necesitas una solución profesional en instalación de geomembranas?</p>
+      <a href="#contacto" class="more-btn">Contáctanos</a>
+    </div>
+
+    <div class="service" id="repair">
+      <div class="service-content">
+        <h3>Reparación de Geomembranas</h3>
+        <p>Las geomembranas pueden sufrir daños debido a diversos factores. Nuestro equipo especializado ofrece servicios de inspección, reparación y mantenimiento preventivo para garantizar la integridad de sus sistemas de contención.</p>
+        <ul>
+          <li>Inspección y Evaluación</li>
+          <li>Reparaciones Especializadas</li>
+          <li>Mantenimiento Preventivo</li>
         </ul>
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="services pvc-installation">
-      <h2>Instalación de Geomembranas de PVC</h2>
-      <p class="intro">
-        En <strong>Geocorp</strong> brindamos soluciones confiables y duraderas en la instalación de <strong>geomembranas de PVC</strong>, ideales para proyectos de impermeabilización, protección ambiental y eficiencia hídrica en distintos sectores.
-      </p>
-    
-      <div class="application-list">
-        <div class="app-item">
-          <img src="./assets/img/estanque.png" alt="Estanques">
-          <h3>1. Estanques</h3>
-          <p>Además de almacenar agua, los estanques con geomembrana embellecen jardines y espacios recreativos. Son versátiles, estéticos y perfectos para áreas decorativas o de descanso.</p>
-        </div>
-        <div class="app-item">
-          <img src="./assets/img/techo.png" alt="Techos">
-          <h3>2. Techos - Terrazas - Azoteas</h3>
-          <p>Protege tu techo de filtraciones y humedad, extendiendo su vida útil. Con nuestras soluciones discretas y duraderas, garantizamos una máxima protección sin sacrificar la estética, ya sea en techos residenciales, comerciales o industriales.</p>
-        </div>
-        <div class="app-item">
-          <img src="./assets/img/jardinera.png" alt="Jardinera">
-          <h3>3. Jardineras</h3>
-          <p>Protege tus jardineras de filtraciones y humedad con nuestras soluciones de impermeabilización. Garantizamos que tus espacios verdes permanezcan secos, seguros y estéticamente agradables, prolongando la vida de tus plantas y estructuras sin sacrificar el diseño.</p>
-        </div>
-        <div class="app-item" onclick="openPopup('./assets/img/banner4.jpg', 'Impermeabilización de Lagunas')">
-          <img src="./assets/img/banner4.jpg" alt="Biodigestores">
-          <h3>4. Canales y Riego</h3>
-          <p>Revestimos canales para mejorar la eficiencia del transporte de agua y reducir pérdidas por infiltración.</p>
-        </div>
-        <div class="app-item" onclick="openPopup('./assets/img/asesoria.jpg', 'Impermeabilización de Lagunas')">
-          <img src="./assets/img/asesoria.jpg" alt="Biodigestores">
-          <h3>5. Acuicultura</h3>
-          <p>Construimos estanques para piscicultura que ofrecen control total del medio acuático y durabilidad.</p>
-        </div>
-        <div class="app-item" onclick="openPopup('./assets/img/mantenimiento.jpg', 'Impermeabilización de Lagunas')">
-          <img src="./assets/img/mantenimiento.jpg" alt="Biodigestores">
-          <h3>6. Techos Verdes</h3>
-          <p>Protegemos estructuras con sistemas de impermeabilización en jardines y azoteas ecológicas.</p>
-        </div>
-        <div class="app-item" onclick="openPopup('./assets/img/banner1.png', 'Impermeabilización de Lagunas')">
-          <img src="./assets/img/banner1.png" alt="Biodigestores">
-          <h3>7. Residuos Industriales</h3>
-          <p>Instalamos geomembranas para contención segura de residuos peligrosos en plantas industriales.</p>
-        </div>
-        <div class="app-item" onclick="openPopup('./assets/img/banner2.jpg', 'Impermeabilización de Lagunas')">
-          <img src="./assets/img/banner2.jpg" alt="Biodigestores">
-          <h3>8. Túneles y Subterráneos</h3>
-          <p>Impermeabilizamos túneles y estructuras subterráneas contra filtraciones y humedad.</p>
-        </div>
-        <div class="app-item" onclick="openPopup('./assets/img/banner3.jpg', 'Impermeabilización de Lagunas')">
-          <img src="./assets/img/banner3.jpg" alt="Biodigestores">
-          <h3>9. Piscinas y Parques Acuáticos</h3>
-          <p>Revestimos instalaciones recreativas garantizando estanqueidad, estética y fácil mantenimiento.</p>
-        </div>
       </div>
-    
-      <div class="cta-box">
-        <p>¿Necesitas una solución profesional en instalación de geomembranas?</p>
-        <a href="#contacto" class="more-btn">Contáctanos</a>
-      </div>
-
-      <div class="service" id="repair">
-        <div class="service-content">
-          <h3>Reparación de Geomembranas</h3>
-          <p>Las geomembranas pueden sufrir daños debido a diversos factores. Nuestro equipo especializado ofrece servicios de inspección, reparación y mantenimiento preventivo para garantizar la integridad de sus sistemas de contención.</p>
-          <ul>
-            <li>Inspección y Evaluación</li>
-            <li>Reparaciones Especializadas</li>
-            <li>Mantenimiento Preventivo</li>
-          </ul>
-        </div>
-        <div class="service-image">
-          <img src="./assets/img/mantenimiento.jpg" alt="Reparación de Geomembranas">
-        </div>
-      </div>
-    
-      <div class="service" id="consulting">
-        <div class="service-content">
-          <h3>Consultoría en Sistemas de Geomembranas</h3>
-          <p>Ofrecemos asesoramiento experto en todas las etapas de su proyecto, desde el diseño hasta la implementación, asegurando soluciones personalizadas y eficientes.</p>
-          <ul>
-            <li>Asistencia en Diseño</li>
-            <li>Selección de Materiales</li>
-            <li>Supervisión de Instalación</li>
-            <li>Capacitación Técnica</li>
-          </ul>
-        </div>
-        <div class="service-image">
-          <img src="./assets/img/consultoria.png" alt="Consultoría en Geomembranas">
-        </div>
-      </div>
-
-      <div id="popup" class="popup-overlay" onclick="closePopup()">
-      <div class="popup-content" onclick="event.stopPropagation()">
-        <img id="popup-img" src="" alt="">
-        <p id="popup-caption"></p>
-        <button onclick="closePopup()">Cerrar</button>
+      <div class="service-image">
+        <img src="./assets/img/mantenimiento.jpg" alt="Reparación de Geomembranas">
       </div>
     </div>
-    </section>
+  
+    <div class="service" id="consulting">
+      <div class="service-content">
+        <h3>Consultoría en Sistemas de Geomembranas</h3>
+        <p>Ofrecemos asesoramiento experto en todas las etapas de su proyecto, desde el diseño hasta la implementación, asegurando soluciones personalizadas y eficientes.</p>
+        <ul>
+          <li>Asistencia en Diseño</li>
+          <li>Selección de Materiales</li>
+          <li>Supervisión de Instalación</li>
+          <li>Capacitación Técnica</li>
+        </ul>
+      </div>
+      <div class="service-image">
+        <img src="./assets/img/consultoria.png" alt="Consultoría en Geomembranas">
+      </div>
+    </div>
 
-  </main>
+    <div id="popup" class="popup-overlay" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+      <img id="popup-img" src="" alt="">
+      <p id="popup-caption"></p>
+      <button onclick="closePopup()">Cerrar</button>
+    </div>
+  </div>
+  </section> -->
 
-  <a href="https://wa.me/+51924067638?text=¡Hola!%20Quisiera%20más%20información." 
-   class="whatsapp-button" 
-   target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" 
-       alt="WhatsApp" />
-  </a>
+</main>
+
+<a href="https://wa.me/+51924067638?text=¡Hola!%20Quisiera%20más%20información." 
+  class="whatsapp-button" 
+  target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" 
+      alt="WhatsApp" />
+</a>
 
 <footer>
   <section class="container-footer">

@@ -314,8 +314,6 @@ document.addEventListener("DOMContentLoaded", () => { // evento se ejecuta cuand
 //? Index - Servicios
 document.addEventListener("DOMContentLoaded", () => {
 
-  const servicesContainer = document.querySelector(".services-container");
-
   const servicesData = [
     {
       title: "Instalación de Geosintéticos",
@@ -337,16 +335,38 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "./assets/img/asesoria.jpg",
       floatImage: "./assets/img/consultoria.png",
       aos: "zoom-out-left"
+    },
+    {
+      title: "Instalación de Geosintéticos",
+      description: "Protección eficaz contra filtraciones de agua en proyectos de construcción.",
+      image: "./assets/img/banner2.jpg",
+      floatImage: "./assets/img/twinny.png",
+      aos: "zoom-out-right"
+    },
+    {
+      title: "Reparación y Mantenimiento",
+      description: "Mantén tus instalaciones seguras y funcionales a largo plazo.",
+      image: "./assets/img/mantenimiento.jpg",
+      floatImage: "./assets/img/leister.png",
+      aos: "zoom-out-up"
     }
   ];
   
-  if (servicesContainer) {  // Verifica que el contenedor exista antes de modificarlo
-    servicesContainer.innerHTML = servicesData.map(service => `
+  const servicesLayout = document.querySelector(".services");
+const columns = [
+  document.querySelector(".column-1"),
+  document.querySelector(".column-2"),
+  document.querySelector(".column-3"),
+];
+
+if (columns.every(col => col)) {
+  servicesData.forEach((service, i) => {
+    const itemHTML = `
       <div class="service-item" data-aos="${service.aos}">
         <div class="floating-image-wrapper">
           ${service.floatImage ? `<img src="${service.floatImage}" alt="Herramienta" class="floating-image">` : ""}
         </div>
-        <div class="image-container"> <!-- Cambié figure por div para evitar problemas -->
+        <div class="image-container"> 
           <img loading="lazy" src="${service.image}" alt="${service.title}">
         </div>
         <div class="description">
@@ -355,16 +375,20 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href="servicios.html#${service.title.toLowerCase().replace(/\s+/g, '-')}" class="more-btn">Ver más</a>
         </div>
       </div>
-    `).join("");
-  } else {
-    console.error("No se encontró el contenedor .services-container");
-  }
+    `;
+    // Distribuye los servicios por columnas: 1 en la primera, 2 en la segunda, 2 en la tercera
+    if (i === 0) columns[0].insertAdjacentHTML("beforeend", itemHTML);
+    else if (i < 3) columns[1].insertAdjacentHTML("beforeend", itemHTML);
+    else columns[2].insertAdjacentHTML("beforeend", itemHTML);
+  });
+}
+
 
   AOS.init({
     offset: 100,
     delay: 100, 
     duration: 1000, // duración en milisegundos
-    once: false,     // true = la animación solo ocurre una vez
+    once: true,     // true = la animación solo ocurre una vez
     easing: 'ease-in-out',
   });
 });

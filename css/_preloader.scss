@@ -1,19 +1,18 @@
 #loader-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 1000;
+  background-color: var(--color_white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #loader {
-  display: block;
   position: relative;
-  left: 50%;
-  top: 50%;
   width: 150px;
   height: 150px;
-  margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: var(--color_skyBlue);
@@ -31,9 +30,8 @@
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: var(--color_skyBlue);
+    border-top-color: var(--color_orange);
     // border-top-color: #e74c3c;
-
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
   }
@@ -49,7 +47,6 @@
     border: 3px solid transparent;
     border-top-color: var(--color_skyBlue);
     // border-top-color: #f9c922;
-
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
   }
@@ -89,17 +86,19 @@
     }
   }
 
-  #loader-wrapper .loader-section {
-    position: fixed;
-    top: 0;
-    width: 51%;
+  .loader-sections {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    width: 100%;
     height: 100%;
-    // background: #222222;
+    z-index: 999;
+  }
+
+  .loader-sections .loader-section {
+    flex: 1;
+    height: 100%;
     background-color: var(--color_white);
-    z-index: 1000;
-    -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(0);  /* IE 9 */
-    transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
   }
 
   #loader-wrapper .loader-section.section-left {
